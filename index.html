@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Pre-Call Diagnostic &middot; Newtech Renewables Ltd &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+/* display/padding/margin are declared explicitly so a page carrying its own bare
+   nav{} element rule (concept mockups do) cannot restyle the AG1 bar. */
+.agnav{display:block;padding:0;margin:0;position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="./" class="on">Pre-Call Diagnostic</a></div></nav>
+<style>
+:root{--bg:#f6f8fb !important;--panel:#fff !important;--ink:#10131a !important;--mut:#53627a !important;
+--line:#d7e0ea !important;--accent:#1f6feb !important;--soft:#eef3f9 !important;--slate:#33475b !important;
+--amber:#c7971a !important;--amber-d:#9c7510 !important;}
+html,body{background:#f6f8fb !important;color:#10131a !important}
+p,li,td,th,span,div,small{color:#1f2a38 !important}
+h1,h2,h3,h4,.h,.sec,.lab{color:#0b1016 !important}
+b,strong{color:#000 !important}a{color:#1458c4 !important}
+.wrap{max-width:1060px}
+header{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b) !important}
+header *{color:#fff !important}header .eyebrow{color:#8ec5ff !important;letter-spacing:1.4px}
+header .sub{color:#cfe0f5 !important}
+.warn,.flag,.win,.oppnote,.card{background:#fff !important;border:1px solid #d7e0ea !important;
+border-radius:10px;padding:18px 20px;margin-bottom:6px}
+.warn{border-left:5px solid #c7971a !important}.flag{border-left:5px solid #c0392b !important}
+.win{border-left:5px solid #157a52 !important}
+.oppnote{background:#eff5ff !important;border-left:5px solid #1f6feb !important}
+.warn *,.flag *,.win *,.oppnote *,.card *{color:#1f2a38 !important}
+.warn b,.flag b,.win b,.oppnote b,.card b{color:#000 !important}
+.lab{font-weight:800;font-size:16px;margin-bottom:8px;display:block}
+table{width:100%;border-collapse:collapse;background:#fff !important;border:1px solid #cfdae6 !important;margin-top:6px}
+table th,table td{border:1px solid #d7e0ea !important;padding:12px 13px;text-align:left;
+vertical-align:top;background:#fff !important;color:#1f2a38 !important}
+table th{background:#0b1016 !important;color:#fff !important;font-size:12px;letter-spacing:.9px;
+text-transform:uppercase;font-weight:700}
+table tr:nth-child(even) td{background:#f4f8fc !important}
+tr.you td{background:#fff6d9 !important}tr.you td b{color:#000 !important}
+td.o{text-align:right;font-weight:800;color:#000 !important;white-space:nowrap}
+.money{background:linear-gradient(135deg,#0a1f3d,#123a6b) !important;border:0 !important;
+border-radius:12px;padding:26px 28px}
+.money *{color:#e8f1fc !important}
+.money .fig{font-size:42px;font-weight:800;color:#8ec5ff !important;line-height:1.1;letter-spacing:-1px}
+.money b{color:#fff !important}
+.cta{background:#0a1f3d !important;border-radius:12px;padding:38px 24px;margin-top:10px}
+.cta *{color:#fff !important}.cta p{color:#b7cfe8 !important}
+footer{border-top:1px solid #d7e0ea !important;margin-top:28px}
+footer *{color:#6b7b8f !important;background:transparent !important;font-size:11.5px;line-height:1.6}
+ul.road,ul.road2{list-style:none;padding-left:0}
+ul.road li,ul.road2 li{background:#fff !important;border:1px solid #d7e0ea !important;
+border-left:4px solid #1f6feb !important;border-radius:8px;padding:13px 16px;margin-bottom:9px}
+section{padding:26px 0}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Pre-Call Diagnostic &middot; Newtech Renewables Ltd</div>
+    <h1>One Hundred And Fourteen Pages, And Not One Phone Number On Any Of Them.</h1>
+    <div class="sub">Prepared for Tony Aungsoe &middot; 6 October 2026 &middot; AG1 Consulting</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">What You Told Our Team</div>
+    <table>
+      <tr><th>&nbsp;</th><th>What you said</th></tr>
+      <tr><td><b>Now</b></td><td><b>4 clients a week</b></td></tr>
+      <tr class="you"><td><b>Goal</b></td><td><b>10 clients a week</b></td></tr>
+      <tr><td><b>Average job</b></td><td><b>&pound;10,000 to &pound;12,000</b></td></tr>
+      <tr><td><b>Agencies</b></td><td>Worked with one before. Some good, some bad</td></tr>
+      <tr class="you"><td><b>The problem, your words</b></td><td><b>The marketing is bad, and you need somebody to control that side of the business</b></td></tr>
+    </table>
+    <div class="oppnote">
+      ⭐ <b>At &pound;11,000 a job, four a week is roughly &pound;2.3M a year and ten a week is about
+      &pound;5.7M.</b> So this is not a conversation about finding a few more enquiries. <b>It is about
+      more than doubling a business that already works.</b>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">🔴 What We Found, And It Backs Up What You Said</div>
+    <div class="flag">
+      <div class="lab">🔴🔴 There is no telephone number anywhere on your website</div>
+      <p>We read your sitemap and checked sixteen pages including your contact page. <b>Not one of them
+      has a clickable phone number. Not one has an email link either.</b></p>
+      <p>⭐⭐ <b>You sell a &pound;10,000 to &pound;12,000 purchase to homeowners.</b> A homeowner
+      spending that wants to speak to somebody. <b>Right now the only way to reach you from your own
+      website is to fill in a form and wait.</b></p>
+      <p>⚠️ <b>And most people read a site like yours on a phone</b>, where tapping a number is the
+      natural thing to do. <b>There is nothing to tap.</b></p>
+    </div>
+
+    <div class="flag" style="margin-top:14px">
+      <div class="lab">🔴🔴 Every single blog post sits in a folder called "uncategorized"</div>
+      <p>Your site has <b>114 pages</b>. The overwhelming majority are articles, and the address of
+      every one of them reads:</p>
+      <p style="padding-left:16px;border-left:3px solid #c0392b;font-family:monospace;font-size:14px">
+      newtechrenewablesltd.co.uk<b>/uncategorized/</b>is-a-heat-pump-worth-it<br>
+      newtechrenewablesltd.co.uk<b>/uncategorized/</b>eco-4-scheme-eligibility<br>
+      newtechrenewablesltd.co.uk<b>/uncategorized/</b>battery-storage-for-solar-panels</p>
+      <p>⭐ <b>"Uncategorized" is the default setting in WordPress.</b> It is what every article is
+      filed under when nobody has set anything up. <b>Somebody published a hundred articles and never
+      spent the ten minutes it takes to organise them.</b></p>
+      <p>⚠️ <b>That is the clearest evidence we can give you for what you already suspected.</b> The
+      content was produced in volume and nobody looked after it.</p>
+    </div>
+
+    <div class="flag" style="margin-top:14px">
+      <div class="lab">🔴 No accreditation appears on any page we checked</div>
+      <p>We looked for <b>MCS, NICEIC, NAPIT, RECC, TrustMark, HIES and EPVS</b> across ten pages
+      including the homepage and contact page. <b>We found none of them.</b></p>
+      <p>🔴 <b>And this matters more for you than for most</b>, because your own articles sell
+      <b>ECO4</b>, the <b>Boiler Upgrade Scheme</b> and battery storage. Those schemes are tied to
+      certification. <b>A homeowner who has read about ECO4 will look for proof you can actually
+      deliver it.</b></p>
+      <p>⚠️ <b>We are not saying you do not hold these.</b> You almost certainly do, or you could not
+      do the work. <b>We are saying a customer cannot see it</b>, and in solar that is one of the two
+      or three things people check before they ring anybody.</p>
+    </div>
+
+    <div class="flag" style="margin-top:14px">
+      <div class="lab">🔴 No advertising tracking of any kind</div>
+      <p>You have <b>Google Analytics</b> and nothing else. <b>No Google Ads tag, no Meta pixel, no
+      conversion tracking.</b></p>
+      <p>⚠️ <b>Which tells us something about the agency.</b> If anybody had run paid advertising
+      properly, a tag would be sitting on the site. <b>Either nothing was ever run, or it was run
+      without anybody measuring what came back.</b></p>
+      <p>⛔ <b>And it means nobody can tell you which of those 114 pages has ever produced a
+      customer.</b></p>
+    </div>
+
+    <div class="flag" style="margin-top:14px">
+      <div class="lab">⚠️ No local business details in the code</div>
+      <p>No address, postcode, opening hours or map coordinates where search engines read them. For a
+      Glasgow installer competing on local searches, that is a gap, and it is an hour or two of
+      work.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">⭐ What Is Genuinely Good, Because A Lot Is</div>
+    <div class="win">
+      <div class="lab">⭐ Somebody did real work here. It is just unfinished</div>
+      <ul>
+        <li><b>114 pages.</b> That is a serious content investment and most installers have six pages
+        and a gallery.</li>
+        <li><b>Articles aimed at real questions</b> &mdash; ECO4 eligibility, heat pump running costs,
+        is battery storage worth it, best heating for an old house. ⭐ <b>That is exactly what a
+        homeowner types into Google before they buy.</b></li>
+        <li><b>Solar, battery storage and heat pumps</b> all covered. Three products, not one.</li>
+        <li><b>Finance mentioned</b>, which matters at your price point.</li>
+        <li><b>A team page and reviews.</b></li>
+        <li><b>A form on every page</b>, including the articles. ⭐ Whoever built it got that part
+        right.</li>
+        <li><b>Google Analytics installed</b>, so there is at least a record of traffic.</li>
+      </ul>
+      <p>⭐⭐ <b>So the raw material is there and it was not cheap.</b> What is missing is the handful of
+      things that turn a reader into a phone call. <b>That is a much better position than having
+      nothing.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Size Of What You Are Asking For</div>
+    <div class="money">
+      <p style="margin-bottom:6px;opacity:.85">Four a week to ten a week, at your own numbers</p>
+      <div class="fig">6 more clients a week</div>
+      <p style="margin-top:12px">At <b>&pound;11,000</b> a job that is about <b>&pound;66,000 a week</b>
+      of additional revenue, or roughly <b>&pound;3.4M a year</b> on top of where you are. <b>Going from
+      around &pound;2.3M to around &pound;5.7M.</b></p>
+      <p style="margin-top:10px;opacity:.9">⚠️ Midpoint of the &pound;10,000 to &pound;12,000 range you
+      gave us, multiplied out. Not a forecast.</p>
+    </div>
+    <div class="oppnote" style="margin-top:16px">
+      ⚠️ <b>And the question that has to come first:</b> could you install ten a week? ⭐ <b>Six more
+      installs a week is not a marketing problem, it is a business one</b> &mdash; crews, surveyors,
+      scaffolding, and materials. <b>If the honest answer is that you could not, we would rather know
+      tomorrow than three months in.</b>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">On The Agency That Went Badly</div>
+    <div class="warn">
+      <div class="lab">You said some good, some bad. Here is what the site suggests happened</div>
+      <p>⭐ <b>The good part is visible.</b> Somebody produced a lot of genuinely sensible content
+      aimed at real buyer questions. That takes time and money and it is still there, working for you.</p>
+      <p>🔴 <b>The bad part is also visible, and it is all the same kind of thing:</b></p>
+      <ul>
+        <li>No phone number on any page</li>
+        <li>Every article filed under the default category</li>
+        <li>No accreditation shown anywhere</li>
+        <li>No advertising tracking, so nothing was measured</li>
+        <li>No local business details in the code</li>
+      </ul>
+      <p>⭐⭐ <b>Every one of those is a finishing job, not a building job.</b> Which is consistent with
+      what you described: somebody who delivered volume and then stopped paying attention.</p>
+      <p><b>You said you need somebody to control the marketing side.</b> ⭐ <b>What that actually means
+      here is somebody who finishes things and then measures whether they worked.</b> Those two habits
+      would have prevented every finding on this page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Want To Ask</div>
+    <ul class="road road2">
+      <li><b>1. Could you install ten a week?</b> ⭐ The first question, and everything else depends on it. Crews, surveyors, materials.</li>
+      <li><b>2. Where do your four a week come from now?</b> Referrals, the website, a lead supplier, door to door?</li>
+      <li><b>3. Do you hold MCS?</b> And RECC, HIES or TrustMark? ⚠️ If you do, none of it is on your website, and that is a quick fix worth more than it sounds.</li>
+      <li><b>4. Has anyone ever run paid advertising for you?</b> There is no tag on the site, which usually means no. If somebody did, we would want to know what happened.</li>
+      <li><b>5. What did the agency actually do, and what did it cost?</b> ⭐ Not to criticise them. To work out what is already paid for and still useful.</li>
+      <li><b>6. Who wrote the 114 articles, and do you still have access to whoever did?</b></li>
+      <li><b>7. What does a customer do when they want to speak to somebody?</b> ⚠️ Genuinely curious, because the website gives them no way to.</li>
+      <li><b>8. What does "controlling the marketing" look like to you?</b> Reports, a weekly call, somebody you can ring? ⭐ Being burned once usually means the answer is specific.</li>
+    </ul>
+    <div class="oppnote" style="margin-top:14px">
+      <b>Question 1 decides whether there is a deal at all.</b> ⭐ Question 7 is the one most likely to
+      make him stop and think, because he will not have realised.
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>114 pages of content and no way to ring you.</h2>
+    <p>You said the marketing was bad. This is what that looks like from the outside.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026, for discussion with Tony
+    Aungsoe at Newtech Renewables Ltd. <b>This is a discussion document, not a proposal or a statement
+    of work, and nothing on it is priced.</b>
+    <b>&#9888; AG1 HAS NOT SPOKEN TO NEWTECH RENEWABLES. The statements that the company takes four
+    clients a week, wants to reach ten, has an average job value of &pound;10,000 to &pound;12,000, has
+    worked with a marketing agency with mixed results, and needs somebody to control the marketing side
+    are ALL as recorded by AG1's team from a booking call on 28 September 2026. They are reported, NOT
+    verified, and AG1 has seen no financial record.</b>
+    <b>&#9888; THE &pound;2.3M, &pound;5.7M AND &pound;3.4M FIGURES ARE ARITHMETIC ON THOSE REPORTED
+    NUMBERS, NOT FORECASTS OR PROJECTIONS. They use the midpoint of the stated range and assume 52
+    weeks, purely to show the scale of the stated goal. AG1 does NOT know Newtech's turnover, margin,
+    capacity or costs and predicts no outcome whatsoever.</b>
+    <b>&#9888; WEBSITE FINDINGS AND THEIR LIMITS, STATED PRECISELY. AG1 read the published sitemap of
+    newtechrenewablesltd.co.uk on 5 October 2026, which listed 114 addresses, and then fetched SIXTEEN
+    of those pages including the homepage and the contact page. Across those sixteen pages AG1 found
+    ZERO telephone links and ZERO email links, and one enquiry form per page. The "uncategorized" URL
+    structure was observed on every article page checked. ⚠️ AG1 did NOT fetch all 114 pages, so these
+    are findings about the pages checked, not a guarantee about every page on the site.</b>
+    <b>&#9888; THE ACCREDITATION CHECK COVERED TEN PAGES ONLY. AG1 searched those pages for MCS,
+    NICEIC, NAPIT, RECC, TrustMark, HIES and EPVS and found none. ⛔ THAT IS NOT EVIDENCE THAT NEWTECH
+    RENEWABLES DOES NOT HOLD ANY ACCREDITATION. AG1 has made no enquiry of any certification body and
+    makes NO statement about the company's certification status, its eligibility for any government
+    scheme, or its right to carry out any work. The page states explicitly that the company almost
+    certainly holds them.</b>
+    <b>&#9888; The absence of a Google Ads tag or Meta pixel is NOT proof that no advertising has been
+    run. Campaigns can run without a site tag or through a third party's container. It is raised above
+    as a question.</b>
+    <b>&#9888; REMARKS ABOUT A PREVIOUS AGENCY ARE INFERENCES FROM THE STATE OF THE WEBSITE AND FROM
+    WHAT TONY AUNGSOE TOLD AG1'S TEAM. AG1 does not know who built or maintained the site, what was
+    agreed, what was paid, or what instructions were given, and makes no allegation of any kind against
+    any third party.</b>
+    <b>&#9888; Company details &mdash; NEWTECH RENEWABLES LTD, company number SC742307, incorporated
+    24 August 2022, registered at 48 West George Street, Glasgow G2 1BP &mdash; are from the public
+    Companies House record read on 5 October 2026. AG1 has examined no financial figure and draws no
+    inference about the company's size or position.</b>
+    <b>&#9888; No enquiry volume, cost per enquiry, ranking position, conversion rate, number of
+    installations or revenue outcome is forecast, promised or implied anywhere on this page.</b>
+  </div>
+</footer>
+</body></html>
